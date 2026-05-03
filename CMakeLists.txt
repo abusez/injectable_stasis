@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(stasis VERSION 1.0 LANGUAGES CXX)
+project(stasis VERSION 1.0 LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -17,6 +17,8 @@ file(GLOB_RECURSE IMGUI_SOURCES
     vendor/imgui/backends/imgui_impl_win32.cpp
     vendor/imgui/backends/imgui_impl_opengl3.cpp
 )
+
+add_subdirectory(vendor/minhook EXCLUDE_FROM_ALL)
 
 add_library(stasis SHARED
     src/main.cpp
@@ -42,13 +44,12 @@ target_include_directories(stasis PRIVATE
     src/
     vendor/imgui/
     vendor/imgui/backends/
-    vendor/minhook/include/
     $ENV{JAVA_HOME}/include/
     $ENV{JAVA_HOME}/include/win32/
 )
 
 target_link_libraries(stasis PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/vendor/minhook/lib/MinHook.x64.lib
+    minhook
     $ENV{JAVA_HOME}/lib/jvm.lib
     opengl32.lib
     glu32.lib

@@ -29,9 +29,6 @@ install_manifest.txt
 *.tlog
 *.lastbuildstate
 
-# Required vendored import library
-!/vendor/minhook/lib/MinHook.x64.lib
-
 # Runtime/local logs
 *.log
 logs/

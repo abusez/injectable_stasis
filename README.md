@@ -41,7 +41,7 @@ During the build, CMake copies `stasis.dll` into `injector/stasis.dll` so the re
 injector/     Windows injector executable and resource definition
 src/          DLL source code
 vendor/imgui Dear ImGui source used by the overlay
-vendor/minhook MinHook source, headers, and x64 import library
+vendor/minhook MinHook source and headers
 ```
 
 ## Controls
