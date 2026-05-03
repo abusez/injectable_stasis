@@ -1,0 +1,4 @@
+#include "resource.h"
+
+// stasis.dll is copied here by the CMake post-build step on the stasis target
+IDR_STASIS_DLL RCDATA "stasis.dll"

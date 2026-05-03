@@ -1,0 +1,59 @@
+# Build outputs
+/build/
+/out/
+/cmake-build-*/
+/.vs/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+*.cmake.user
+*.sln
+*.slnx
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Compiled binaries and intermediates
+*.dll
+*.exe
+*.lib
+*.pdb
+*.ilk
+*.exp
+*.obj
+*.res
+*.recipe
+*.tlog
+*.lastbuildstate
+
+# Required vendored import library
+!/vendor/minhook/lib/MinHook.x64.lib
+
+# Runtime/local logs
+*.log
+logs/
+crash-*.txt
+hs_err_pid*.log
+
+# Local/editor state
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+*.bak
+
+# Project-local scratch files
+previous_chat.txt
+
+# Generated embedded payload copied by CMake before building the injector
+/injector/stasis.dll
+
+# Vendored dependency build folders
+/vendor/**/build/
+/vendor/**/build_*/
+/vendor/**/build-out/
+/vendor/**/build_out/
